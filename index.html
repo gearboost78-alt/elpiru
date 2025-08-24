@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Login | Sistem Pemerintahan</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
+
+    <style>
+      /* Reset */
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+
+      body {
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(135deg, #002855, #00509e); /* biru elegan */
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      /* Kotak Login */
+      .login-container {
+        background: #fff;
+        padding: 40px 35px;
+        width: 380px;
+        border-radius: 15px;
+        box-shadow: 0px 8px 25px rgba(0,0,0,0.2);
+        text-align: center;
+        animation: fadeInDown 0.9s ease;
+      }
+
+      .login-container .logo {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto 15px;
+        border-radius: 50%;
+        background: url('dashboard/assets/images/ElPiru.png') no-repeat center;
+        background-size: contain;
+        border: 3px solid #00509e;
+        box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+      }
+
+      .login-container h3 {
+        font-weight: 600;
+        color: #002855;
+        margin-bottom: 5px;
+      }
+
+      .login-container p {
+        font-size: 14px;
+        color: #555;
+        margin-bottom: 25px;
+      }
+
+      /* Input */
+      .form-group {
+        position: relative;
+        margin-bottom: 20px;
+      }
+
+      .form-control {
+        width: 100%;
+        padding: 12px 15px 12px 45px;
+        border-radius: 30px;
+        border: 1.5px solid #ccc;
+        transition: 0.3s;
+        font-size: 14px;
+      }
+
+      .form-control:focus {
+        border-color: #00509e;
+        box-shadow: 0 0 8px rgba(0,80,158,0.3);
+        outline: none;
+      }
+
+      /* Icon */
+      .form-group i {
+        position: absolute;
+        top: 50%;
+        left: 15px;
+        transform: translateY(-50%);
+        color: #00509e;
+      }
+
+      /* Button */
+      .btn {
+        width: 100%;
+        padding: 12px;
+        border-radius: 30px;
+        border: none;
+        font-weight: 600;
+        background: linear-gradient(90deg, #c8102e, #ff2e63);
+        color: #fff;
+        cursor: pointer;
+        transition: 0.3s;
+        letter-spacing: 1px;
+        font-size: 15px;
+      }
+
+      .btn:hover {
+        background: linear-gradient(90deg, #ff2e63, #c8102e);
+        transform: scale(1.05);
+      }
+
+      /* Animasi */
+      @keyframes fadeInDown {
+        from { opacity: 0; transform: translateY(-30px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <div class="login-container">
+      <div class="logo"></div>
+      <h3>Selamat Datang</h3>
+      <p>Sistem Layanan Pemerintahan</p>
+
+      <form action="login.php" method="post">
+        <div class="form-group">
+          <i class="fa fa-user"></i>
+          <input type="text" class="form-control" placeholder="Username" name="username" required>
+        </div>
+        <div class="form-group">
+          <i class="fa fa-lock"></i>
+          <input type="password" class="form-control" placeholder="Password" name="password" required>
+        </div>
+        <button type="submit" class="btn">Login</button>
+      </form>
+    </div>
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  </body>
+</html>
